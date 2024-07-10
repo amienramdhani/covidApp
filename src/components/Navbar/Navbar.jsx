@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CiMenuFries } from 'react-icons/ci';
 import { FaTimes } from 'react-icons/fa';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -12,24 +12,24 @@ const Navbar = () => {
     <>
       <div className='lg:hidden absolute block top-16 w-full left-0 right-0 bg-secondary opacity-80 transition'>
         <ul className='text-center text-xl p-20'>
-          <Link spy={true} smooth={true} to='home'>
+          <Link spy={true} smooth={true} to='/'>
             <li className='my-4 py-4 border-b border-primary hover:bg-primary hover:opacity-60 hover:rounded'>
-              Global
+              Home
             </li>
           </Link>
-          <Link spy={true} smooth={true} to='indonesia'>
+          <Link spy={true} smooth={true} to='/home/indonesia'>
             <li className='my-4 py-4 border-b border-primary hover:bg-primary hover:opacity-60 hover:rounded'>
               Indonesia
             </li>
           </Link>
-          <Link spy={true} smooth={true} to='provinsi'>
+          <Link spy={true} smooth={true} to='/home/provinsi'>
             <li className='my-4 py-4 border-b border-primary hover:bg-primary hover:opacity-60 hover:rounded'>
               Provinsi
             </li>
           </Link>
-          <Link spy={true} smooth={true} to='form'>
+          <Link spy={true} smooth={true} to='/home/about'>
             <li className='my-4 py-4 border-b border-primary hover:bg-primary hover:opacity-60 hover:rounded'>
-              Form Covid
+              About
             </li>
           </Link>
         </ul>
@@ -47,24 +47,24 @@ const Navbar = () => {
           <div className='lg:flex md:flex lg:flex-1 items-center justify-end font-normal hidden'>
             <div className='flex-10'>
               <ul className='flex gap-8 mr-16 text-[18px]'>
-                <Link spy={true} smooth={true} to='home'>
+                <Link spy={true} smooth={true} to='/'>
                   <li className='hover:text-secondary transition border-b-2 border-primary hover:border-secondary cursor-pointer'>
-                    Global
+                    Home
                   </li>
                 </Link>
-                <Link spy={true} smooth={true} to='indonesia'>
+                <Link spy={true} smooth={true} to='/home/indonesia'>
                   <li className='hover:text-secondary transition border-b-2 border-primary hover:border-secondary cursor-pointer'>
                     Indonesia
                   </li>
                 </Link>
-                <Link spy={true} smooth={true} to='provinsi'>
+                <Link spy={true} smooth={true} to='/home/provinsi'>
                   <li className='hover:text-secondary transition border-b-2 border-primary hover:border-secondary cursor-pointer'>
                     Provinsi
                   </li>
                 </Link>
-                <Link spy={true} smooth={true} to='form'>
+                <Link spy={true} smooth={true} to='/home/about'>
                   <li className='hover:text-secondary transition border-b-2 border-primary hover:border-secondary cursor-pointer'>
-                    Form Covid
+                    About
                   </li>
                 </Link>
               </ul>
