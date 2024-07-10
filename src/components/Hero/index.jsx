@@ -13,9 +13,10 @@ const Hero = () => {
               Monitoring Perkembangan Covid
             </h2>
             <p className='mb-10 font-medium leading-relaxed text-secondary text-justify'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
-              laborum incidunt, aliquid, odit nisi itaque, at dolore quos eum
-              voluptatum quae blanditiis! Saepe, praesentium omnis?
+              Covid App Merupakan suatu Platform yang menyediakan informasi
+              mengenai jumlah covid di Indonesia dan diseluruh dunia.Di dalam
+              website ini akan memberikan informasi yang positif terkena covid
+              yang meninggal dan yang sembuh dari covid.
             </p>
 
             <a
