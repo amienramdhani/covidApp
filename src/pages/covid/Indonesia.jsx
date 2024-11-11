@@ -1,6 +1,5 @@
 import Global from '../../components/Global';
 import Hero from '../../components/Hero';
-import Province from '../../components/Province';
 
 const IndonesiaPage = () => {
   return (
@@ -10,7 +9,6 @@ const IndonesiaPage = () => {
         title='Indonesia Situation'
         title1='Data Covid Berdasarkan Indonesia'
       />
-      <Province />
     </div>
   );
 };

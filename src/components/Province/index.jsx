@@ -1,8 +1,6 @@
-import provinces from '../../utils/constants/provinces';
 import TableRow from '../TableRow';
 
-const Province = () => {
-  const prov = provinces;
+const Province = ({ provinces }) => {
   return (
     <section id='provinsi' className='bg-white pb-32 pt-36'>
       <div className='container'>
@@ -14,33 +12,53 @@ const Province = () => {
             <p className='text-md font-medium text-secondary md:text-lg'>
               Data Covid Berdasarkan Provinsi
             </p>
-
             <div className='relative overflow-x-auto mt-10'>
-              <table className='w-full text-sm text-left rtl:text-right text-secondary lg:table-auto'>
-                <thead className='text-xs text-white uppercase bg-primary'>
+              <table className='w-full text-sm text-left text-gray-700 border border-gray-200 rounded-lg shadow-md table-fixed'>
+                <thead className='text-xs font-semibold text-white uppercase bg-primary'>
                   <tr>
-                    <th scope='col' className='px-6 py-3'>
+                    <th
+                      scope='col'
+                      className='px-6 py-3 w-1/5 border-b border-gray-300'
+                    >
                       Provinsi
                     </th>
-                    <th scope='col' className='px-6 py-3'>
+                    <th
+                      scope='col'
+                      className='px-6 py-3 w-1/5 border-b border-gray-300'
+                    >
                       Positif
                     </th>
-                    <th scope='col' className='px-6 py-3'>
+                    <th
+                      scope='col'
+                      className='px-6 py-3 w-1/5 border-b border-gray-300'
+                    >
                       Sembuh
                     </th>
-                    <th scope='col' className='px-6 py-3'>
+                    <th
+                      scope='col'
+                      className='px-6 py-3 w-1/5 border-b border-gray-300'
+                    >
                       Dirawat
                     </th>
-                    <th scope='col' className='px-6 py-3'>
+                    <th
+                      scope='col'
+                      className='px-6 py-3 w-1/5 border-b border-gray-300'
+                    >
                       Meninggal
                     </th>
                   </tr>
                 </thead>
-                {/* Untuk Table Body */}
-                {/* looping data covid provinsi dengan maps */}
-                {prov.map(function (pro) {
-                  return <TableRow key={pro.kota} pro={pro} />;
-                })}
+                <tbody>
+                  {provinces.map((pro, index) => (
+                    <TableRow
+                      key={pro.kota}
+                      pro={pro}
+                      className={`${
+                        index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
+                      }`}
+                    />
+                  ))}
+                </tbody>
               </table>
             </div>
           </div>
